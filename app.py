@@ -35,8 +35,10 @@ def cadastrar_restaurante():
     limpar_tela()
     print("Cadastro de novos restaurante: \n")
     nome_restaurante = input("Qual o nome do restaurante: ")
-    restaurantes.append(nome_restaurante)
-    print(f"O restaurante {nome_restaurante} foi cadastrado!" )
+    categoria = input(f"Digite a categoria do restaurante {nome_restaurante}:")
+    dados_do_restaurante = {'nome':nome_restaurante, 'categoria':categoria, 'ativo':False}
+    restaurantes.append(dados_do_restaurante)
+    print(f"O restaurante {nome_restaurante} foi cadastrado! 🆗" )
     voltar_ao_menu()
 
 def listar_restaurantes():
