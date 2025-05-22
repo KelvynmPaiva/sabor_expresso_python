@@ -4,9 +4,12 @@ class Restaurante:
         self.categoria = categoria
         self.ativo = False
 
-restaurante_praca = Restaurante('Praça', 'Gourmet')
-restaurante_pizza = Restaurante('Pizza', 'Pizzaria')
+    def __str__(self):
+        return f'{self.nome} | {self.categoria}'
 
-print(vars(restaurante_praca))
-print(vars(restaurante_pizza))
+restaurante_praca = Restaurante('Burguer King', 'Hamburgueria')
+restaurante_pizza = Restaurante('Pizza', 'Italiana')
+
+print(restaurante_praca)
+print(restaurante_pizza)
 
