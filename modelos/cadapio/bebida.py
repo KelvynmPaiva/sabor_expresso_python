@@ -1,7 +1,11 @@
-class Bebida:
+from .item_cardapio import Item_Cardapio
+
+class Bebida(Item_Cardapio):
     def __init__(self, nome, preco, tamanho):
-        self.nome = nome
-        self.preco = preco
+        super().__init__(nome, preco)
         self.tamanho = tamanho
+    
+    def __str__(self):
+        return self._nome
 
 
